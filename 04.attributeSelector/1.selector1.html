@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        /*
+            속성 선택 : 태그에 설정된 속성을 통해 선택하는 선택자
+            [속성] : 속성을 가지고 있는 태그를 선택
+            [속성 = 값] : 속성의 값이 지정된 값과 일치하는 태그를 선택
+            [속성 != 값] : 속성의 값이 지정된 값과 일치하지 않는 태그를 선택
+        */
+        $(function() {
+            $("p[title]").css("background-color", "yellow");
+            $("p[title = 'a1']").css("color", "red");
+            $("p[title != 'a1']").css("color", "blue");
+        });
+    </script>
+</head>
+<body>
+    <p>속성이 없는 p 태그</p>
+    <p title="a1">title이 a1인 p태그</p>
+    <p title="a2">title이 a2인 p태그</p>
+</body>
+</html>

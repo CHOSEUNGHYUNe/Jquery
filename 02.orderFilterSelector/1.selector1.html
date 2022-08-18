@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        /*
+            첫번째 태그 선택하기
+            :first : 선택자에 해당하는 태그 중 가장 처음 태그가 선택
+            :first-child : 선택자에 해당하는 태그 중 각 영역별 첫번째 태그가 선택된다.
+                            처음 태그가 선택자에 해당하지 않으면 선택되지 않는다."
+            :first-of-type : 선택자에 해당하는 태그 중 각 영역별 처음 태그가 선택
+        */
+        $(function() {
+            $("p:first").css("background-color","red");
+            $("p:first-child").css("background-color","orange");
+            $("p:first-of-type").css("font-size", "30px");
+        });
+    </script>
+</head>
+<body>
+    <p>p태그</p>
+    <hr>
+    <div>
+        <p>div안의 p태그</p>
+        <p>div안의 p태그</p>
+        <p>div안의 p태그</p>
+    </div>
+    <hr>
+    <div>
+        <div>div안의 div태그</div>
+        <p>div안의 p태그</p>
+        <p>div안의 p태그</p>
+    </div>
+</body>
+</html>

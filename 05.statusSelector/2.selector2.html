@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // :focus : 현재 포커스가 주어진 태그를 선택한다.
+
+        $(function() {
+            $(":focus").css("background-color", "yellow");
+        });
+    </script>
+</head>
+<body>
+    <input type="text" autofocus="autofocus"><br>
+    <input type="text">
+</body>
+</html>

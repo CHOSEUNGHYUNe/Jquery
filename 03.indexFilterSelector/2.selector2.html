@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        /*
+            :gt(인덱스) : 선택자에 해당하는 태그 중 인덱스(0부터 시작)번째 태그 이후의 태그를 선택
+            :lt(인덱스) : 선택자에 해당하는 태그 중 인덱스(0부터 시작)번째 태그 이전의 태그를 선택
+        */
+        $(function() {
+            $("p:gt(0)").css("background-color", "lightblue");
+            $("p:lt(5)").css("background-color", "orange");
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <p>p태그</p>
+        <p>p태그</p>
+        <p>p태그</p>
+    </div>
+    <hr>
+    <div>
+        <p>p태그</p>
+        <p>p태그</p>
+        <p>p태그</p>
+    </div>
+    <hr>
+    <div>
+        <p>p태그</p>
+        <p>p태그</p>
+        <div>div태그</div>
+    </div>
+</body>
+</html>

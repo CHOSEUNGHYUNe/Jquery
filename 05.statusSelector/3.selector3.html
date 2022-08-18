@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        
+        // :contains('문자열') : 지정된 문자열이 포함되어 있는 태그를 선택한다.
+
+        $(function() {
+            $("p:contains('Hello')").css("background-color", "yellow");    
+        });
+    </script>
+</head>
+<body>
+    <div>Hello World</div>
+    <div>Hello World</div>
+    <p>Hello World</p>
+    <div>Hi World</div>
+</body>
+</html>

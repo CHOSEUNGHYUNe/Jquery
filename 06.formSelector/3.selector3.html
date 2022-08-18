@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        /*
+            readonly는 서버로 넘어감, disabled는 서버로 넘어가지 않음.
+            :enabled : 활성 상태인 input 태그가 선택된다.
+            :disabled : 비활성 상태 input 태그가 선택된다.
+            :selected : select태그 내의 option 태그 중 현재 선택되어 있는 태그를 선택한다.
+            :checked : checkbox나 radio에서 현재 check 되어 있는 태그를 선택
+        */
+        $(function() {
+            $(":enabled").css("background-color", "yellow");
+            $(":disabled").css("background-color", "red");
+            let selected = $(":selected").text();
+            alert(selected);
+        });
+    </script>
+</head>
+<body>
+    <input type="text" readonly="readonly">활성 상태<br>
+    <input type="password" readonly="readonly">활성 상태<br>
+    <input type="text" disabled="disabled">비활성 상태<br>
+    <input type="text" disabled="disabled">비활성 상태<br>
+    <select>
+        <option value="1">선택1</option>
+        <option value="2">선택2</option>
+        <option value="3" selected>선택3</option>
+    </select>
+</body>
+</html>
